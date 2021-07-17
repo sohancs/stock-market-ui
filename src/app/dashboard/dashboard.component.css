@@ -1,0 +1,53 @@
+.container {
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+  }
+  thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  tbody {
+    display: block;
+    overflow-y: auto;
+    table-layout: fixed;
+    max-height: 200px;
+  }
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.row-margin-5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.table-center {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}
+
+.form-select {
+    width: 200px;
+}
+
+.alert {
+    padding: 0rem 1rem;
+}
