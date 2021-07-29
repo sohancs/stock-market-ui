@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { CompanyDetailsDTO } from './model/company-details-dto'
 import { StockResponseDTO } from './model/stock-reponse-dto';
 
@@ -9,8 +10,9 @@ import { StockResponseDTO } from './model/stock-reponse-dto';
 export class StockService {
 
   constructor(private httpClient : HttpClient) { }
-  companybaseUrl : string = "http://localhost:7000/manage-company-service/api/v1.0/market/company";
-  stockbaseUrl : string = "http://localhost:7000/stock-service/api/v1.0/market/stock";
+  contextPath: string = environment.contextPath;
+  companybaseUrl : string = this.contextPath + environment.companyUrl;
+  stockbaseUrl : string = this.contextPath + environment.stockUrl;
 
   getAllCompaniesDetails() {
     return this.httpClient.get<CompanyDetailsDTO>(this.companybaseUrl + "/getAll");

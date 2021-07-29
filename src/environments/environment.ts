@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  contextPath: 'http://localhost:7000',
+  companyUrl: '/manage-company-service/api/v1.0/market/company',
+  stockUrl: '/stock-service/api/v1.0/market/stock'
 };
 
 /*
